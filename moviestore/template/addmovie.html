@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<!--built-in form code-->
+
+
+<!--{% load static %}-->
+<!--{% block title %} Add movie {% endblock %}-->
+
+<!--{% block content }-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--<table>-->
+<!--    {{form.as_table}}-->
+<!--</table>-->
+
+<!--    <input type="submit">-->
+
+
+<!--</form>-->
+
+<!--{% endblock }-->
+
+
+{%load static %}
+{% block content %}
+<center><h1>Add Movie</h1></center>
+<!--<center>-->
+<!--<form class="row g-3" method="POST" enctype="multipart/form-data">-->
+<!--  {% csrf_token %}-->
+<!--<div class="mb-3">-->
+<!--  <label  class="form-label">movie name</label>-->
+<!--  <input type="text" class="form-control" name="m" placeholder="name">-->
+<!--</div>-->
+<!--<div class="mb-3">-->
+<!--  <label class="form-label">Desc</label>-->
+<!--    <textarea class="form-control" name="d" placeholder="Desc"></textarea>-->
+<!--</div>-->
+<!--<div class="mb-3">-->
+<!--  <label  class="form-label">year</label>-->
+<!--  <input type="number" class="form-control" name="y" placeholder="year">-->
+<!--</div>-->
+
+<!--<div class="mb-3">-->
+<!--  <label  class="form-label">Cover</label>-->
+<!--  <input type="file" class="form-control" name="c">-->
+<!--</div>-->
+<!--<div class="mb-3">-->
+<!--    <input type="submit" class="btn-outline-warning form-control">-->
+<!--</div>-->
+<!--</form>-->
+<!--</center>-->
+
+
+<form class="row" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  {{form|crispy}}
+
+    <input type="submit" class="btn-outline-warning" style="height:40px;width:100px;border-radius:10px;margin-left:100px;">
+
+</form>
+
+
+
+
+
+
+ {% endblock%}

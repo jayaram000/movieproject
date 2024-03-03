@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+
+{%load static %}
+{% block content %}
+
+
+<form class="row" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+    <p>Are you sure you want to delete?</p>
+    <input type="submit" class="btn-outline-warning" style="height:40px;width:100px;border-radius:10px;margin-left:100px;">
+
+</form>
+
+
+
+ {% endblock%}

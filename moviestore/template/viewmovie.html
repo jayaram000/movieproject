@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} view {% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+     <div class="col-md-4 mt-2">
+        <img src="{{f.img.url}}" height="300px" width="400px">
+     </div>
+      <div class="col-md-5 mt-5">
+          <h3 >NAME:<span class="text-info">{{f.Name}}</span></h3>
+        <h3>YEAR:<span class="text-info">{{f.year}}</span></h3>
+        <h3>DESC:<span class="text-info">{{f.desc}}</span></h3>
+        <a  href="{% url 'moviegallery:edit' f.id %}" ><button class="btn btn-primary" type="submit">EDIT</button></a>
+        <a  href="{% url 'moviegallery:delete' f.id %}" ><button class="btn btn-danger" type="submit">DELETE</button></a>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
